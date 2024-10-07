@@ -1,0 +1,236 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="A well made and handcrafted Bootstrap 5 template">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
+  <meta name="author" content="Holger Koenemann">
+  <meta name="generator" content="Eleventy v2.0.0">
+  <meta name="HandheldFriendly" content="true">
+  <title>EXP EXO Types</title>
+  <link rel="stylesheet" href="theme.min.css">
+
+  <style>
+    /* inter-300 - latin */
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: local(''),
+        url('fonts/inter-v12-latin-300.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('fonts/inter-v12-latin-300.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* inter-400 - latin */
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: local(''),
+        url('fonts/inter-v12-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('fonts/inter-v12-latin-regular.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: local(''),
+        url('fonts/inter-v12-latin-500.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('fonts/inter-v12-latin-500.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: local(''),
+        url('fonts/inter-v12-latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('fonts/inter-v12-latin-700.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    /* Initially hide the navbar with opacity and visibility */
+    #navScroll {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+
+    /* Hover area */
+    .hover-area {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50px; /* Adjust as needed */
+      background-color: transparent;
+      z-index: 999;
+    }
+
+    /* Show navbar when hover area or navbar is hovered */
+    .hover-area:hover + #navScroll,
+    #navScroll:hover {
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0s; /* No delay when hovering */
+    }
+
+    /* Add a delay when the mouse leaves the navbar */
+    #navScroll {
+      transition-delay: 0.5s; /* Delay the fade-out */
+    }
+  </style>
+
+
+</head>
+
+<body class="bg-black text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll">
+      
+  <!-- Hover area -->
+  <div class="hover-area"></div>
+  
+  <!-- Navigation Bar -->
+  <nav id="navScroll" class="navbar navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
+    <div class="container">
+      <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href="index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
+          <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
+        </svg>
+        <span class="ms-md-1 mt-1 fw-bolder me-md-5">EXP EXO</span>
+      </a>
+
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 list-group list-group-horizontal">
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="index.html" aria-label="Homepage">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="learn.html" aria-label="A sample content page">
+            Learn
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="gamepage.html" aria-label="A system message page">
+            Gamex
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="exocomics.html" aria-label="A system message page">
+            ExoComics
+          </a>
+        </li>
+      </ul>
+      <a href="index.html" aria-label="Explore" class="btn btn-outline-light">
+        <small>EXplore</small>
+      </a>
+    </div>
+  </nav>
+      <div class="bg-black py-vh-3">
+        <div class="container bg-black px-vw-5 py-vh-3 rounded-5 shadow">
+  
+          <div class="row gx-5">
+            <div class="col-12 col-md-6">
+              <div class="card bg-transparent mb-5" data-aos="zoom-in-up">
+                <div class="bg-dark shadow rounded-5 p-0">
+                  <img src="gas gaint.jpg" width="582" height="327" alt="abstract image"
+                    class="img-fluid rounded-5 no-bottom-radius" loading="lazy">
+                  <div class="p-5">
+                    <h2 class="fw-lighter">Gas Gaints</h2>
+                    <p class="pb-4 text-secondary">A gas giant is a large planet mostly composed of helium and/or hydrogen. These planets, like Jupiter and Saturn in our solar system, don’t have hard surfaces and instead have swirling gases above a solid core. Gas giant exoplanets can be much larger than Jupiter, and much closer to their stars than anything found in our solar system.
+
+                        For most of human history our understanding of how planets form and evolve was based on the eight planets in our solar system. But over the last 25 years, the discovery of more than 5,600 exoplanets, or planets outside our solar system, changed all that.</p>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="card bg-transparent" data-aos="zoom-in-up">
+                <div class="bg-dark shadow rounded-5 p-0">
+                  <img src="Neptunian.jpg" width="582" height="442" alt="abstract image"
+                    class="img-fluid rounded-5 no-bottom-radius" loading="lazy">
+                  <div class="p-5">
+                    <h2 class="fw-lighter">Neptunian planets</h2>
+                    <p class="pb-4 text-secondary">Neptunian exoplanets are similar in size to Neptune or Uranus in our solar system. Neptunian planets typically have hydrogen and helium-dominated atmospheres with cores of rock and heavier metals.
+
+                        Neptunian exoplanets are similar in size to Neptune or Uranus in our solar system. (Neptune is about four times the size, or radius, of Earth and almost 17 times its mass, or weight.) Neptunian exoplanets may have a mixture of interiors though all would be rocky with heavier metals at their cores. Neptunian planets typically have hydrogen- and helium-dominated atmospheres. We’re also discovering mini-Neptunes, planets smaller than Neptune and bigger than Earth. No planets like these exist in our solar system.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="card bg-transparent mb-5 mt-5" data-aos="zoom-in-up">
+                <div class="bg-dark shadow rounded-5 p-0">
+                  <img src="superearthh.jpg" width="582" height="390" alt="abstract image"
+                    class="img-fluid rounded-5 no-bottom-radius" loading="lazy">
+                  <div class="p-5">
+                    <h2 class="fw-lighter">Super Earth</h2>
+                    <p class="pb-4 text-secondary">Super-Earths – a class of planets unlike any in our solar system – are more massive than Earth yet lighter than ice giants like Neptune and Uranus, and can be made of gas, rock or a combination of both. They are between twice the size of Earth and up to 10 times its mass.
+
+                        Super-Earth is a reference only to an exoplanet’s size – larger than Earth and smaller than Neptune – but not suggesting they are necessarily similar to our home planet. The true nature of these planets remains shrouded in uncertainty because we have nothing like them in our own solar system – and yet, they are common among planets found so far in our galaxy.</p>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="card bg-transparent" data-aos="zoom-in-up">
+                <div class="bg-dark shadow rounded-5 p-0">
+                  <img src="terres.jpg" width="582" height="327" alt="abstract image"
+                    class="img-fluid rounded-5 no-bottom-radius" loading="lazy">
+                  <div class="p-5">
+                    <h2 class="fw-lighter">Terrestial</h2>
+                    <p class="pb-4 text-secondary">Terrestrial planets (Earth sized and smaller) are rocky worlds, composed of rock, silicate, water and/or carbon. To determine if some of these worlds have atmospheres, oceans or other signs of habitability, it takes more investigation. Larger terrestrial exoplanets (those at least twice as massive as Earth) are classified as super-Earths.
+
+                        In general, terrestrial planets have a bulk composition that is dominated by rock or iron, and a solid or liquid surface. These faraway worlds may have gaseous atmospheres, but that’s not a defining feature.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+    </div>
+
+  </main>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800, // values from 0 to 3000, with step 50ms
+    });
+  </script>
+  <script>
+    let scrollpos = window.scrollY;
+    const header = document.querySelector(".navbar");
+    const header_height = header.offsetHeight;
+
+    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm");
+    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm");
+
+    window.addEventListener('scroll', function () {
+      scrollpos = window.scrollY;
+
+      if (scrollpos >= header_height) { add_class_on_scroll(); }
+      else { remove_class_on_scroll(); }
+
+      console.log(scrollpos);
+    })
+  </script>
+
+</body>
+
+</html>

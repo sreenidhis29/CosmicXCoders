@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exoplanet Quiz</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background: url('images.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            --bs-font-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        .container {
+            background-color: rgb(35, 33, 33);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            margin-top: 50px;
+        }
+
+        h1, h3 {
+            color:white;
+            text-align: center;
+            font-family: var(--bs-body-font-family);
+        }
+
+        .quiz-level {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+
+        .btn-custom {
+            background-color: white;
+            color:black;
+            border: none;
+            margin-top: 1rem;
+        }
+
+        .btn-custom:hover {
+            background-color: whitesmoke;
+        }
+
+        .level-locked {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .quiz-feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+        }
+        .home-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .btn {
+            color:black;
+            background-color: white;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <a href="gamepage.html" class="btn home-button btn-primary">Back to Gamex</a>
+    <!-- Main Container -->
+    <div class="container text-center">
+        <h1>Exoplanet Quiz</h1>
+        <h3>Test your knowledge of exoplanets across three difficulty levels</h3>
+
+        <!-- Quiz Levels -->
+        <div class="row">
+            <!-- Beginner Level -->
+            <div class="col-md-4">
+                <div class="quiz-level" id="beginner">
+                    <h4>Beginner Level</h4>
+                    <button class="btn btn-custom" onclick="startQuiz('beginner')">Start Quiz</button>
+                    <div id="beginner-quiz" style="display:none;">
+                        <form id="beginner-form">
+                            <p>1. What is the closest exoplanet to Earth?</p>
+                            <input type="radio" name="q1" value="a"> Proxima b<br>
+                            <input type="radio" name="q1" value="b"> Kepler-452b<br>
+                            <input type="radio" name="q1" value="c"> HD 209458 b<br>
+
+                            <p>2. What does the term 'exoplanet' refer to?</p>
+                            <input type="radio" name="q2" value="a"> A planet orbiting a star outside our solar system<br>
+                            <input type="radio" name="q2" value="b"> A planet in our solar system<br>
+
+                            <!-- Add more questions -->
+
+                            <button type="button" class="btn btn-custom mt-2" onclick="submitQuiz('beginner')">Submit</button>
+                        </form>
+                        <div class="quiz-feedback" id="beginner-feedback"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intermediate Level -->
+            <div class="col-md-4">
+                <div class="quiz-level level-locked" id="intermediate">
+                    <h4>Intermediate Level</h4>
+                    <button class="btn btn-custom" disabled onclick="startQuiz('intermediate')">Start Quiz</button>
+                    <div id="intermediate-quiz" style="display:none;">
+                        <form id="intermediate-form">
+                            <p>1. How many exoplanets have been confirmed to exist?</p>
+                            <input type="radio" name="q1" value="a"> About 1,000<br>
+                            <input type="radio" name="q1" value="b"> Over 4,000<br>
+
+                            <p>2. What is a 'hot Jupiter'?</p>
+                            <input type="radio" name="q2" value="a"> A large gas giant that orbits very close to its star<br>
+                            <input type="radio" name="q2" value="b"> A cold gas giant far from its star<br>
+
+                            <!-- Add more questions -->
+
+                            <button type="button" class="btn btn-custom mt-2" onclick="submitQuiz('intermediate')">Submit</button>
+                        </form>
+                        <div class="quiz-feedback" id="intermediate-feedback"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Level -->
+            <div class="col-md-4">
+                <div class="quiz-level level-locked" id="advanced">
+                    <h4>Advanced Level</h4>
+                    <button class="btn btn-custom" disabled onclick="startQuiz('advanced')">Start Quiz</button>
+                    <div id="advanced-quiz" style="display:none;">
+                        <form id="advanced-form">
+                            <p>1. What is the method called for detecting exoplanets by measuring the dimming of a star?</p>
+                            <input type="radio" name="q1" value="a"> Transit Method<br>
+                            <input type="radio" name="q1" value="b"> Radial Velocity Method<br>
+
+                            <p>2. What is the significance of Kepler-452b?</p>
+                            <input type="radio" name="q2" value="a"> It is the first Earth-sized planet found in a habitable zone<br>
+                            <input type="radio" name="q2" value="b"> It is the closest exoplanet to Earth<br>
+
+                            <!-- Add more questions -->
+
+                            <button type="button" class="btn btn-custom mt-2" onclick="submitQuiz('advanced')">Submit</button>
+                        </form>
+                        <div class="quiz-feedback" id="advanced-feedback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        let attempts = {
+            beginner: 3,
+            intermediate: 3,
+            advanced: 3
+        };
+
+        function startQuiz(level) {
+            document.getElementById(`${level}-quiz`).style.display = 'block';
+        }
+
+        function submitQuiz(level) {
+            let form = document.getElementById(`${level}-form`);
+            let feedback = document.getElementById(`${level}-feedback`);
+
+            // Validate answers
+            let correctAnswers = (level === 'beginner') ? ['a', 'a'] : (level === 'intermediate') ? ['b', 'a'] : ['a', 'a'];
+            let userAnswers = Array.from(form.querySelectorAll('input[type="radio"]:checked')).map(input => input.value);
+
+            if (userAnswers.length < correctAnswers.length) {
+                feedback.innerHTML = "Please answer all the questions.";
+                return;
+            }
+
+            let isCorrect = userAnswers.every((answer, index) => answer === correctAnswers[index]);
+
+            if (isCorrect) {
+                feedback.innerHTML = "Correct! You've passed the " + level + " level!";
+                if (level === 'beginner') {
+                    enableNextLevel('intermediate');
+                } else if (level === 'intermediate') {
+                    enableNextLevel('advanced');
+                }
+            } else {
+                attempts[level]--;
+                if (attempts[level] > 0) {
+                    feedback.innerHTML = `Incorrect. You have ${attempts[level]} attempts left.`;
+                } else {
+                    feedback.innerHTML = "Sorry, no more attempts left for this level.";
+                }
+            }
+        }
+
+        function enableNextLevel(nextLevel) {
+            let nextLevelDiv = document.getElementById(nextLevel);
+            nextLevelDiv.classList.remove('level-locked');
+            nextLevelDiv.querySelector('button').removeAttribute('disabled');
+        }
+    </script>
+</body>
+</html>
