@@ -2,155 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Exo Match</title>
-    <link rel="icon" type="image/x-icon" href="galaxy.png">
-    <!-- Bootstrap CDN -->
+    <title>EXO Match</title>
+    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="match.css">
-    <style>
-    /* inter-300 - latin */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 300;
-      font-display: swap;
-      src: local(''),
-        url('fonts/inter-v12-latin-300.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/inter-v12-latin-300.woff') format('woff');
-      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
+    <body>
 
-    /* inter-400 - latin */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: local(''),
-        url('fonts/inter-v12-latin-regular.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/inter-v12-latin-regular.woff') format('woff');
-      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: local(''),
-        url('fonts/inter-v12-latin-500.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/inter-v12-latin-500.woff') format('woff');
-      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: local(''),
-        url('fonts/inter-v12-latin-700.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('fonts/inter-v12-latin-700.woff') format('woff');
-      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-    /* Initially hide the navbar with opacity and visibility */
-    #navScroll {
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    }
-
-    /* Hover area */
-    .hover-area {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 50px; /* Adjust as needed */
-      background-color: transparent;
-      z-index: 999;
-    }
-
-    /* Show navbar when hover area or navbar is hovered */
-    .hover-area:hover + #navScroll,
-    #navScroll:hover {
-      opacity: 1;
-      visibility: visible;
-      transition-delay: 0s; /* No delay when hovering */
-    }
-
-    /* Add a delay when the mouse leaves the navbar */
-    #navScroll {
-      transition-delay: 0.5s; /* Delay the fade-out */
-    }
-    body {
-            background-image: url('starry.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-    .home-button {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-    .btn {
-            color:black;
-            background-color: white;
-            border-radius: 50px;
-        }
-    </style>
-</head>
-<body class="bg-black text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll">
-     <!-- Hover area -->
-  <div class="hover-area"></div>
-  
-  <!-- Navigation Bar -->
-  <nav id="navScroll" class="navbar navbar-dark bg-black fixed-top px-vw-5" tabindex="0">
-    <div class="container">
-      <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href="index.html">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
-          <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
-        </svg>
-        <span class="ms-md-1 mt-1 fw-bolder me-md-5">EXP EXO</span>
-      </a>
-
-      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 list-group list-group-horizontal">
-        <li class="nav-item">
-          <a class="nav-link fs-5" href="index.html" aria-label="Homepage">
-            Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fs-5" href="learn.html" aria-label="A sample content page">
-            Learn
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fs-5" href="gamepage.html" aria-label="A system message page">
-            Gamex
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fs-5" href="exocomics.html" aria-label="A system message page">
-            ExoComics
-          </a>
-        </li>
-      </ul>
-      <a href="gamepage.html" aria-label="Explore" class="btn btn-outline-light">
-        <small>Back to Gamex</small>
-      </a>
-    </div>
-  </nav>
-    <div class="container game-container">
+        <!-- Home Button -->
+        <a href="index.html" class="btn home-button">Home</a>
+    
+        <!-- Game Container -->
+        <div class="container game-container">
             <h1>Match the Exoplanets</h1>
             <h3>Match Exoplanets by Type, Distance from Earth, and Speciality</h3>
             
@@ -185,88 +49,9 @@
                 </tbody>
             </table>
         </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        let attempts = 0;
-
-        // JavaScript to check answers and allow 3 attempts
-        function checkAnswers() {
-            attempts++;
-            let score = 0;
-
-            const correctAnswers = [
-                { type: "correct", distance: "correct", speciality: "correct" },
-                { type: "correct", distance: "correct", speciality: "correct" },
-                { type: "correct", distance: "correct", speciality: "correct" }
-            ];
-
-            const userAnswers = [
-                { type: document.getElementById("type1").value, distance: document.getElementById("distance1").value, speciality: document.getElementById("speciality1").value },
-                { type: document.getElementById("type2").value, distance: document.getElementById("distance2").value, speciality: document.getElementById("speciality2").value },
-                { type: document.getElementById("type3").value, distance: document.getElementById("distance3").value, speciality: document.getElementById("speciality3").value }
-            ];
-
-            // Check each answer
-            userAnswers.forEach((answer, index) => {
-                if (answer.type === correctAnswers[index].type && 
-                    answer.distance === correctAnswers[index].distance && 
-                    answer.speciality === correctAnswers[index].speciality) {
-                    score++;
-                }
-            });
-
-            const result = document.getElementById("result");
-
-            // If all answers are correct
-            if (score === 3) {
-                result.textContent = "Amazing! You matched all exoplanets correctly!";
-                result.classList.remove("text-warning");
-                result.classList.add("text-success");
-            } else if (attempts < 3) {
-                // If less than 3 attempts, allow retry
-                result.textContent = `You got ${score} out of 3 matches correct. You have ${3 - attempts} more attempt(s). Try again!`;
-                result.classList.remove("text-success");
-                result.classList.add("text-warning");
-            } else {
-                // After 3 attempts, show correct answers
-                result.innerHTML = `
-                    You've used all your attempts. Here are the correct answers:<br>
-                    <strong>Proxima Centauri b</strong>: Habitable zone rocky planet, 4.2 light years, Closest known exoplanet to Earth.<br>
-                    <strong>Kepler-452b</strong>: Earth-like super-Earth, 1,400 light years, Potential for life, Earth's cousin.<br>
-                    <strong>HD 189733 b</strong>: Gas giant, 64 light years, Extreme weather with glass rain.
-                `;
-                result.classList.remove("text-warning");
-                result.classList.add("text-danger");
-            }
-        }
-          <script src="bootstrap.bundle.min.js"></script>
-  <script src="aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800, // values from 0 to 3000, with step 50ms
-    });
-  </script>
-  <script>
-    let scrollpos = window.scrollY;
-    const header = document.querySelector(".navbar");
-    const header_height = header.offsetHeight;
-
-    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm");
-    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm");
-
-    window.addEventListener('scroll', function () {
-      scrollpos = window.scrollY;
-
-      if (scrollpos >= header_height) { add_class_on_scroll(); }
-      else { remove_class_on_scroll(); }
-
-      console.log(scrollpos);
-    })
-  </script>
-    </script>
-</body>
-</html>
+    
+        <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
