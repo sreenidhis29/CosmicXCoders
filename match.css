@@ -1,51 +1,84 @@
-/* Starry Sky Background */
 body {
+    background: linear-gradient(180deg, rgba(12, 27, 48, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    color: #fff;
     --bs-font-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
+
+/* Home Button */
+.home-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+.home-button:hover {
+    background-color: #ffaa00;
+}
+
 /* Game Container */
 .game-container {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
+    margin: 5% auto;
     padding: 2rem;
+    background-color: rgba(20, 40, 60, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+    max-width: 800px;
+    border: 2px solid #ffcc00;
 }
 
-/* Headings */
-h1 {
-    font-size: 2rem;
-    color: white;
-    text-shadow: 0 0 10px white;
-    font-family: var(--bs-body-font-family);
+h1, h3 {
+    text-align: center;
+    color: #ffcc00;
+    text-shadow: 2px 2px 5px #000;
 }
 
-p {
-    font-size: 1.1rem;
-    color: white;
-    font-family: var(--bs-body-font-family);
-}
-
-/* Table */
+/* Table Styling */
 table {
-    border: 1px solid #fff;
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.1rem;
 }
 
-/* Responsive Adjustments */
+table th, table td {
+    padding: 15px;
+    border: 1px solid #ffcc00;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Button Styling */
+.btn {
+    color: #000;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: transform 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #ffaa00;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     h1 {
         font-size: 1.75rem;
     }
-    
-    p {
-        font-size: 1rem;
-    }
-    
     .game-container {
         padding: 1.5rem;
     }
-
     table {
         font-size: 0.9rem;
     }
@@ -55,20 +88,10 @@ table {
     h1 {
         font-size: 1.5rem;
     }
-    
-    p {
-        font-size: 0.9rem;
-    }
-    
     .game-container {
         padding: 1rem;
     }
-
     table {
         font-size: 0.8rem;
     }
-}
-.btn btn-primary {
-    font-size: 1.5rem;
-    color: black;
 }
