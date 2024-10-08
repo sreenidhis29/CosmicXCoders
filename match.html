@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <title>Exoplanet Match Game</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exo Match</title>
     <link rel="icon" type="image/x-icon" href="galaxy.png">
     <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="match.css">
     <style>
@@ -149,115 +150,41 @@
       </a>
     </div>
   </nav>
-    <div class="container-fluid bg-dark text-light min-vh-100 d-flex align-items-center justify-content-center">
-        <div class="col-12 col-md-10 col-lg-8 game-container p-5 rounded">
-            <h1 class="text-center mb-4">Exoplanet Matching Game</h1>
-            <p class="text-center">Match the exoplanet with its type, distance from Earth, and specialty. You have 3 attempts!</p>
+    <div class="container game-container">
+            <h1>Match the Exoplanets</h1>
+            <h3>Match Exoplanets by Type, Distance from Earth, and Speciality</h3>
             
-            <!-- Game Table -->
-            <div class="table-responsive">
-                <table class="table table-dark table-hover table-bordered text-center">
-                    <thead>
-                        <tr>
-                            <th>Exoplanet</th>
-                            <th>Type</th>
-                            <th>Distance from Earth</th>
-                            <th>Specialty</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Proxima Centauri b</td>
-                            <td>
-                                <select class="form-select" id="type1">
-                                    <option value="">Select Type</option>
-                                    <option value="correct">Habitable zone rocky planet</option>
-                                    <option value="wrong">Gas giant</option>
-                                    <option value="wrong">Ice giant</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-select" id="distance1">
-                                    <option value="">Select Distance</option>
-                                    <option value="correct">4.2 light years</option>
-                                    <option value="wrong">1,400 light years</option>
-                                    <option value="wrong">64 light years</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-select" id="speciality1">
-                                    <option value="">Select Specialty</option>
-                                    <option value="correct">Closest known exoplanet to Earth</option>
-                                    <option value="wrong">Extreme weather with glass rain</option>
-                                    <option value="wrong">Potential for life, Earth's cousin</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Kepler-452b</td>
-                            <td>
-                                <select class="form-select" id="type2">
-                                    <option value="">Select Type</option>
-                                    <option value="wrong">Gas giant</option>
-                                    <option value="correct">Earth-like super-Earth</option>
-                                    <option value="wrong">Ice giant</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-select" id="distance2">
-                                    <option value="">Select Distance</option>
-                                    <option value="wrong">4.2 light years</option>
-                                    <option value="correct">1,400 light years</option>
-                                    <option value="wrong">64 light years</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-select" id="speciality2">
-                                    <option value="">Select Specialty</option>
-                                    <option value="wrong">Extreme weather with glass rain</option>
-                                    <option value="correct">Potential for life, Earth's cousin</option>
-                                    <option value="wrong">Closest known exoplanet to Earth</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>HD 189733 b</td>
-                            <td>
-                                <select class="form-select" id="type3">
-                                    <option value="">Select Type</option>
-                                    <option value="wrong">Habitable zone rocky planet</option>
-                                    <option value="wrong">Earth-like super-Earth</option>
-                                    <option value="correct">Gas giant</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-select" id="distance3">
-                                    <option value="">Select Distance</option>
-                                    <option value="correct">64 light years</option>
-                                    <option value="wrong">4.2 light years</option>
-                                    <option value="wrong">1,400 light years</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-select" id="speciality3">
-                                    <option value="">Select Specialty</option>
-                                    <option value="correct">Extreme weather with glass rain</option>
-                                    <option value="wrong">Potential for life, Earth's cousin</option>
-                                    <option value="wrong">Closest known exoplanet to Earth</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Button to check answers -->
-            <div class="text-center">
-                <button class="btn btn-primary" onclick="checkAnswers()">Check Answers</button>
-            </div>
-            <!-- Result Display -->
-            <p class="mt-4 text-center" id="result"></p>
-    </div>
+            <table class="table table-striped table-responsive">
+                <thead>
+                    <tr>
+                        <th>Exoplanet Name</th>
+                        <th>Type</th>
+                        <th>Distance from Earth</th>
+                        <th>Speciality</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><button class="btn">Proxima b</button></td>
+                        <td><button class="btn">Super-Earth</button></td>
+                        <td><button class="btn">4.24 light years</button></td>
+                        <td><button class="btn">Closest Exoplanet to Earth</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn">Kepler-452b</button></td>
+                        <td><button class="btn">Earth-like</button></td>
+                        <td><button class="btn">1,400 light years</button></td>
+                        <td><button class="btn">Potentially Habitable</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn">HD 209458 b</button></td>
+                        <td><button class="btn">Gas Giant</button></td>
+                        <td><button class="btn">150 light years</button></td>
+                        <td><button class="btn">First Exoplanet with an Atmosphere</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
